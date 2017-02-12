@@ -1,6 +1,8 @@
 
 
-
+#For JS only 
+Find parent element
+loop through elements
 
 clear all the data reset form
 
