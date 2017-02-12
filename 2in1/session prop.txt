@@ -1,0 +1,50 @@
+
+Dummay Data
+------
+
+	
+	 
+	  
+ 
+Information on Session Number: 123456
+
+SERVICE_TAG:	S44GT1
+advancedTS : Hard Reset
+advancedTs : LCD BIST
+advancedts : PSU BIST
+BTTR :: CST 9-5
+CHATTRANSCRIPT_EMAIL:	sameer2isamit.in
+CompanyName:	JAM
+EMAIL:	sameer2isamit.in
+ENABLE_SEND_TRANSCRIPT:	sameer2isamit.in
+FONT_CHOICE:	Normal
+HOST_ADDRESS:	2
+IP_ADDRESS:	5
+JVM_VERSION:	UNKNOWN
+LANG_NAME:	English - US
+LANG_NUMBER:	11
+LANG_SPELLCODE:           am
+LastName:			Z
+LOGIN_NAME:	Sameer
+Phonenum:	5555555555
+SALESVALUE:	1
+Service_Tag:	S44GT1
+SUBJECT:	MY_OLD_PROBLEM
+submitBtn:	Chat Now
+USER_AGENT:	Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87@$%^&*():;'" Safari/537.36
+ 
+	
+	
+ 
+
+ --------------------------------
+
+ 
+ 	Y4R1B
+		
+		//http://www.dell.com/support/home/in/en/inbsdt1/product-support/servicetag/Y4R1B/warranty
+		//table table-striped warranty-table
+
+Read all the lines
+Find words and divide
+Ignore first colon

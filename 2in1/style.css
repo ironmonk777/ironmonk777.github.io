@@ -1,0 +1,814 @@
+		body {
+			
+			/* font-family: Optima,Segoe,"Segoe UI",Candara,Calibri,Arial,sans-serif; */
+			font-size: 12px;
+			font-weight: 300;
+			font-family: 'Open Sans', sans-serif;
+			margin:0px;
+			padding:0px;
+			color:#777;
+			background-image: url("weather.png");
+			
+		}
+		table {
+			border-spacing: 0px !important;
+			padding:0px !important;
+		}
+		td {
+			border-spacing: 0px !important;
+			padding:0px;
+		}
+		
+		th {
+			    font-size: 14px;
+				color:#777777;
+				font-weight:normal;
+				line-height:40px;
+				padding-left:5px;
+				padding-right:5px;
+				text-align:left;
+				text-transform:uppercase;
+		}
+		
+		.tblMainContainer {
+			width:100%;
+		}
+		.tblMainContainer td {
+			vertical-align:top;
+		}
+		
+		.table1 {
+			border:5px solid grey;
+			width:500px;
+			margin: 0 auto;
+		}
+		
+		.table1 td {
+			vertical-align:top;
+		}
+		
+		.table2 {
+			border:5px solid grey;
+			width:500px;
+			margin: 0 auto;
+		}
+		.table2 td {
+			vertical-align:top;
+		}
+				
+		.tblcl {
+			background-color:rgba(255,255,255,0.8);
+			width:100%;
+		}
+		
+		.tblcl td {
+			
+			
+			vertical-align:top;
+			
+			
+					
+		}
+		
+		
+		
+		.tblClRow td {
+			/* padding:5px; */
+		}
+		
+		.tblMenu {
+			width:100%;
+			
+		}
+		.tblMenu td {
+			font-weight:normal;
+			line-height:40px;
+			
+			text-align:center;
+			padding:0px !important;
+			cursor:pointer;
+			background-color:grey;
+			color:#fff;
+		}
+		
+		.tdActiveMenu {
+			background-color:#fff !important;
+			color:#777 !important;			
+		}
+		
+		.tdActiveMenu td {
+			
+			/* 'Open Sans', sans-serif */
+			
+		}
+		.td-padding-left {
+			
+			
+		}
+		
+		
+		
+		
+		/* Session Properties */
+		
+		.tblSessionPorperties {
+			width:100%;
+		}
+		
+		.tblSessionPorperties th {
+			    font-size: 14px;
+				color:#777777;
+				font-weight:normal;
+				line-height:40px;
+				padding-left:5px;
+				padding-right:5px;
+				text-align:left;
+		}
+		
+		.tblSessionPorperties td {
+			padding-left:5px;
+			padding-right:5px;
+			text-align:right;
+		}
+		
+		.tblSessionPorperties textarea {
+			height:200px;
+		}
+		
+		
+		
+		/* Buttons */
+		
+		.btnGreen {
+			background-image: linear-gradient(to bottom,#5cb85c 0,#419641 100%);   
+			background-repeat: repeat-x;
+			border-color: #3e8f3e;
+			margin: 5px 0;
+			box-shadow: inset 0 1px 0 rgba(255,255,255,.15), 0 1px 1px rgba(0,0,0,.075);
+			padding: 5px 10px;
+			font-size: 12px;
+			line-height: 1.5;
+			border-radius: 3px;
+			color: #fff;
+			background-color: #5cb85c;
+			display: inline-block;
+		    text-align: center;
+			white-space: nowrap;
+			vertical-align: middle;
+			touch-action: manipulation;
+			cursor: pointer;
+			user-select: none;
+			border: 1px solid transparent;
+			padding: 1px 5px;
+			font-size: 12px;
+			line-height: 1.5;
+			border-radius: 3px;
+		}
+		
+		.btnGreen:hover {
+			background-color: #419641;
+			background-position: 0 -15px;
+			color: #fff;
+			border-color: #398439;
+		    text-decoration: none;
+			background-image: linear-gradient(to bottom,#5cb85c 0,#419641 100%);
+			text-shadow: 0 -1px 0 rgba(0,0,0,.2);
+			box-shadow: inset 0 1px 0 rgba(255,255,255,.15), 0 1px 1px rgba(0,0,0,.075);
+			padding: 1px 5px;
+			font-size: 12px;
+			line-height: 1.5;
+			border-radius: 3px;
+			display: inline-block;
+		    font-weight: 400;
+			text-align: center;
+			white-space: nowrap;
+			vertical-align: middle;
+			touch-action: manipulation;
+			cursor: pointer;
+			user-select: none;
+			border: 1px solid transparent;
+		    text-transform: none;
+			overflow: visible;
+			box-sizing: border-box;
+		}
+		
+		.btnSilver {
+			    margin: 5px 0;
+				    text-shadow: 0 1px 0 #fff;
+					background-image: linear-gradient(to bottom,#fff 0,#e0e0e0 100%);
+					background-repeat: repeat-x;
+					    border-color: #ccc;
+						box-shadow: inset 0 1px 0 rgba(255,255,255,.15), 0 1px 1px rgba(0,0,0,.075);
+						padding: 1px 5px;
+    font-size: 12px;
+    line-height: 1.5;
+    border-radius: 3px;
+	color: #333;
+    
+	    font-weight: 400;
+		    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+	    touch-action: manipulation;
+    cursor: pointer;
+	    user-select: none;
+		    border: 1px solid #ccc;
+			    -webkit-appearance: button;
+				    text-transform: none;
+					    overflow: visible;
+						    box-sizing: border-box;
+							    -webkit-tap-highlight-color: rgba(0,0,0,0);
+								    box-sizing: border-box;
+		}
+		
+	.btnSilver:hover {	
+		    margin: 5px 0;
+			background-color: #e0e0e0;
+			background-position: 0 -15px;
+			    color: #333;
+				    border-color: #adadad;
+					    text-decoration: none;
+						    text-shadow: 0 1px 0 #fff;
+							    background-image: linear-gradient(to bottom,#fff 0,#e0e0e0 100%);
+								    background-repeat: repeat-x;
+									    box-shadow: inset 0 1px 0 rgba(255,255,255,.15), 0 1px 1px rgba(0,0,0,.075);
+										   
+    font-size: 12px;
+    line-height: 1.5;
+    border-radius: 3px;
+	    display: inline-block;
+		    font-weight: 400;
+			    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+	    touch-action: manipulation;
+    cursor: pointer;
+	    user-select: none;
+		     border: 1px solid #ccc;
+			    -webkit-appearance: button;
+				    text-transform: none;
+					    overflow: visible;
+						    box-sizing: border-box;
+							-webkit-tap-highlight-color: rgba(0,0,0,0);
+			
+			
+			
+	}		
+			
+		
+		/* CustomerInfo */
+		
+		.tblContainerCustInfo {
+			width:100%;
+		}
+		
+		.tblContainerCustInfo td {
+			
+		}
+		
+		.tblContainerCustInfo th {
+			font-size: 14px;
+				color:#777777;
+				font-weight:normal;
+				line-height:40px;
+				padding-left:5px;
+				padding-right:5px;
+				text-align:left;
+		}
+
+		
+		.tbdCustInfo {
+			width:100%;
+			border-spacing: 0px;
+			
+		}
+		.tbdCustInfo td {
+			padding-left:5px;
+			padding-right:5px;
+			
+		}
+		
+		.tbdCustInfo input {
+			width:100%;
+			margin-bottom:5px;
+		}
+		
+		
+		.tblAllPageSpiels {
+			width:100%;
+		}
+		
+		.tblAllPageSpiels td{
+			padding-left:5px;
+			padding-right:5px;
+		}
+		
+		
+		.tblOpening {
+			width:100%;
+		}
+		
+		.tblOpening td {
+			width:50%;
+			padding-left:5px;
+			padding-right:5px;
+		}
+		
+		.btn {
+			background-color:#fff;
+			border: 1px solid transparent;
+			/* border-radius: 4px; */
+			border-color: #ccc;
+			margin-top: 5px;
+			margin-bottom: 5px;
+			padding: 6px 8px;
+			font-size:12px;
+		}
+		.btn:hover {
+			background-color:#eee;
+		}
+		
+		
+		.btnSuccess {
+			background-color:#5cb85c;
+			border: 1px solid transparent;
+			/* border-radius: 4px; */
+			border-color: #ccc;
+			margin-top: 5px;
+			margin-bottom: 5px;
+			padding: 6px 12px;
+			font-size:12px;
+		}
+		
+		.btnCurrent {
+			background-color:#337ab7;
+			color:#FFF;
+			border: 1px solid transparent;
+			/* border-radius: 4px; */
+			border-color: #ccc;
+			margin-top: 5px;
+			margin-bottom: 5px;
+			padding: 6px 12px;
+			font-size:12px;
+		}
+		
+		
+		
+		/* Troubleshooting */
+		
+		.tblTs {
+			width:100%;
+		}
+		
+		.tblTs td {
+			padding-left:5px;
+			padding-right:5px;
+			
+		}
+		
+		.tblTsSteps {
+			width:100%;
+		}
+		.tblTsSteps td {
+			
+		}
+		
+		#taCustomerConcern {
+			height:50px;
+		}
+
+		#taTroubleshootingLogs {
+			height:120px;
+		}
+		
+		#taNextAction {
+			height:50px;
+		}
+		
+		
+		.tblEpsaDiagTest {
+			width:100%;
+		}
+		.tblEpsaDiagTest th{
+			padding:0px;
+		}
+		.tblEpsaDiagTest td{
+			padding:0px;
+			padding-left:10px;
+		}
+		
+		
+		.tblNoDiagTestRan {
+			width:100%;
+		}
+		.tblNoDiagTestRan td {
+			padding:0px;
+			padding-left:10px;
+		}
+		
+		
+		
+		.tblOtherDiagTestRan {
+			width:100%;
+		}
+		.tblOtherDiagTestRan td{
+			padding:0px;
+			padding-left:10px;
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		/* tblDispatch  */
+		
+		.tblDispatch {
+			width:100%;
+			
+		}
+		
+		.tblDispatch td {
+			padding-left:5px;
+			padding-right:5px;
+			
+		}
+		
+		
+		
+		.tblPartsToReplace {
+			width:100%;
+		}
+		
+		.tblPartsToReplace td {
+			padding-left:5px;
+			padding-right:5px;	
+		}
+		
+		
+		
+		
+		/* tblDispatchContainer  */
+		
+		.tblDispatchContainer {
+			width:100%;
+		}
+		
+		.tblDispatchContainer td {
+			width:50%;
+		}
+		
+		
+		
+		
+		
+		
+		
+		/* DispatchPOS  */
+		
+		.tblDispatchPOS {
+			width:100%;
+		}
+		
+		.tblDispatchPOS td {
+			padding-left:5px;
+			padding-right:5px;	
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		/* DispatchNBD  */
+		
+		.tblDispatchNBD {
+			width:100%;
+		}
+		
+		.tblDispatchNBD td {
+			padding-left:5px;
+			padding-right:5px;	
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	
+		
+		/* tblDispatchRTD  */
+		
+		.tblDispatchRTD td {
+			width:100%;
+		}
+		
+		.tblDispatchRTD td {
+			padding-left:5px;
+			padding-right:5px;	
+		}
+		
+		
+		
+		
+		
+		
+		
+		/* tblAddress  */
+		
+		.tblAddress{
+			width:100%;
+		}
+		
+		.tblAddress td {
+			padding-left:5px;
+			padding-right:5px;	
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+		/* tblVprsk  */
+		
+		.tblVprsk{
+			width:100%;
+		}
+		
+		.tblVprsk td {
+			padding-left:5px;
+			padding-right:5px;	
+		}
+		
+		
+		
+		
+		
+		/* tblL2Name  */
+		
+		.tblL2Name{
+			width:100%;
+		}
+		
+		.tblL2Name td {
+			padding-left:5px;
+			padding-right:5px;	
+		}
+		
+		
+		
+		
+		/* tblHddConcent  */
+		
+		.tblHddConcent {
+			width:100%;
+		}
+		
+		.tblHddConcent td {
+			padding-left:5px;
+			padding-right:5px;	
+		}
+		
+		
+		/* tblDispatchNotes  */
+		
+		.tblDispatchNotes {
+			width:100%;
+		}
+		
+		.tblDispatchNotes td {
+			padding-left:5px;
+			padding-right:5px;	
+		}
+		
+		
+		
+		/* Stamps Table */
+		
+		.tblStamps  {
+			Width:100%;
+		}
+		
+		.tblStamps th {
+			font-size: 14px;
+				color:#777777;
+				font-weight:normal;
+				line-height:40px;
+				padding-left:5px;
+				padding-right:5px;
+				text-align:left;
+		}
+		.tblStamps td {
+			padding-left:5px;
+			padding-right:5px;
+			text-align:left;
+		}
+		
+		.tblStamps label {
+			
+			
+			text-indent: -15px;
+		}
+		
+		.tblStamps  input {
+		  width: 13px;
+		  height: 13px;
+		  padding: 0;
+		  margin:0;
+		  vertical-align: bottom;
+		  position: relative;
+		  top: -1px;
+		  *overflow: hidden;
+		}
+	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		/* tblClosing */
+		
+		.tblClosing  {
+			Width:100%;
+		}
+		
+		.tblClosing th {
+			font-size: 14px;
+				color:#777777;
+				font-weight:normal;
+				line-height:40px;
+				padding-left:5px;
+				padding-right:5px;
+				text-align:left;
+		}
+		.tblClosing td {
+			width:50%;
+			padding-left:5px;
+				padding-right:5px;
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		/* tblEmail */
+		
+		.tblEmail  {
+			Width:100%;
+		}
+		
+		.tblEmail th {
+			font-size: 14px;
+				color:#777777;
+				font-weight:normal;
+				line-height:40px;
+				padding-left:5px;
+				padding-right:5px;
+				text-align:left;
+		}
+		.tblEmail td {
+			padding-left:5px;
+				padding-right:5px;
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		/* tblLogs */
+		
+		.tblLogs  {
+			Width:100%;
+		}
+		
+		.tblLogs th {
+			font-size: 14px;
+				color:#777777;
+				font-weight:normal;
+				line-height:40px;
+				padding-left:5px;
+				padding-right:5px;
+				text-align:left;
+		}
+		.tblLogs td {
+			padding-left:5px;
+			padding-right:5px;
+			
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		/* Copy Text */
+		
+		textarea {
+			resize: none;
+			height: 70px;
+ 
+   overflow: auto !important;
+		}
+		
+		.tblCopyText {
+			width:100%;
+		}
+		
+		.tblCopyText th {
+				font-size: 14px;
+				color:#777777;
+				font-weight:normal;
+				line-height:40px;
+				padding-left:5px;
+				padding-right:5px;
+				text-align:left;
+		}
+		
+		.tblCopyText td{
+			
+			padding-left:5px;
+			padding-right:5px;
+			padding-bottom:5px;
+		}
+
+		
+	.form-control {
+    box-sizing:border-box;
+    overflow: hidden;
+    width:100%;
+	display:block;
+    padding: 2px 4px;
+    font-size: 12px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    /* border-radius: 4px; */
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+	.form-control-test {
+    box-sizing:border-box;
+    overflow: hidden;
+    width:100%;
+	display:block;
+    padding: 2px 4px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    /* border-radius: 4px; */
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+		

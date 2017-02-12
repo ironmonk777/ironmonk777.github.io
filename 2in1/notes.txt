@@ -1,0 +1,194 @@
+
+
+
+
+clear all the data reset form
+
+
+validation for SLN and L2
+auto complete for SLN
+delta link
+
+Ts steps
+
+timeZONES
+REMAINDER
+
+BROADCAST
+EMBED HTML IN vb APP
+
+make it run with jquery
+make it run with javascript
+
+validation
+
+auto complete for SLN
+auto complete for Tech Logs
+
+
+
+Title
+Next action for delta
+
+
+DL
+GL
+copy on click
+code specific the to a chat windows.
+Reset all controls
+Disble refresh
+
+>> Email fix
+>>Email from old cl>> Done
+
+
+
+Second Chat Window
+
+>>Generate data>> Done
+>>button color change>> Done
+>>last button clicked>> Done
+
+
+
+POP up TS - Intro
+
+
+TS questions
+
+Multi chat function
+Validation
+
+WEB app OwnFlow
+multi comments
+Get storage from ramesh
+Create scripts for web storage and cookie check at company
+
+
+
+
+9823052979 chetan
+
+>>Pending spill email
+>>test email
+
+POWER WORDS
+
+
+>>Start with storing data for opening form and data generation, 
+>>Multi comments - random
+>>Generate own buttin ons
+>>validation
+>>read content from file
+>>read content frm page
+
+
+
+
+
+
+
+ownership
+empathy stat
+moment to check the details you provided
+sr title
+delta for trainning
+need to research
+
+blank delta logs
+please share the service tag.
+
+u will recieve email in some time.
+please perform the ts and let me know
+import logsservice queue
+
+CID
+Export from file
+
+
+#templates
+
+Run epsa before contacting dell. Email line bottom.
+cust reply dsp creation
+BIOS update
+ePSA
+LCD bist
+DRIVERS
+OS
+DISCLAMER EMAILS
+ISSUE resolved after replacement.
+Hard reset
+two chat lactency
+incope before verifing
+
+suggest us a templete
+
+#OOW FLow
+
+Convey it to the cust
+tell him these numbers you need to contact
+is there any dell product that you need to have support
+It was a pleasure assisitng you. Thank you for choosing Dell.
+
+
+------
+
+	
+   
+  	  
+SessionId :                  43434533
+Fname : Sameer
+Lname   	: Vaidya
+Phone :                        8605385488
+Company:    						   iSAM IT
+Email :             sameer@isamit.in
+ExpCode    	  		 :34345544
+SrvTag : 1DS34R
+	
+  	
+   		  
+		  ------
+		  
+# tblMainContainer
+	table1600	table2600
+
+	
+	
+	
+	
+	.btn-success:focus, .btn-success:hover {
+    
+
+
+
+
+
+			
+			
+		
+		.btnSilver {
+			background-image: linear-gradient(to bottom,#fff 0,#e0e0e0 100%);
+			    box-shadow: inset 0 1px 0 rgba(255,255,255,.15), 0 1px 1px rgba(0,0,0,.075);
+				    padding: 1px 5px;
+    font-size: 12px;
+    line-height: 1.5;
+    border-radius: 3px;
+	    color: #333;
+    background-color: #fff;
+	    border-color: #ccc;
+		}
+		
+		.btn-default:focus, .btn-default:hover {
+    background-color: #e0e0e0;
+    background-position: 0 -15px;
+	    color: #333;
+    
+    border-color: #adadad;
+	    text-decoration: none;
+		    text-shadow: 0 1px 0 #fff;
+			    background-image: linear-gradient(to bottom,#fff 0,#e0e0e0 100%);
+				    background-repeat: repeat-x;
+					box-shadow: inset 0 1px 0 rgba(255,255,255,.15), 0 1px 1px rgba(0,0,0,.075);
+}
+	
+	
