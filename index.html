@@ -19233,6 +19233,13 @@ var widgetsTooltip = $.ui.tooltip;
 				
 				$("#" + id + " .tblDispatchContainer").hide();
 				
+				
+				
+					if ($("#" + id + " .taAfLogs").val().length == 0){
+						$("#" + id + " .taAfLogs").val("Please Paste Copy-2-Clipboard log from Answer-Flow here.").addClass('watermark');
+					}
+
+							
 				// $(".tblDispatch").hide();
 				// $(".tblPartsToReplace").hide();
 				// $(".tblDispatchPOS").hide();
@@ -19836,7 +19843,7 @@ else if(data[0].trim() == "phonenum") {
 $("#" + id + " .taCopyText").select();
 				document.execCommand('copy');
 			break;
-			case "Tag?":
+			case "System + Tag":
 				$("#" + id + " .taCopyText").val("Can you confirm that the System you need support with is " + $("#" + id + " .txtSysType").val() + " with Service Tag : " + $("#" + id + " .txtSrvTag").val() + "?");
 				
 				$("#" + id + " .taCopyText").select();
@@ -19844,7 +19851,7 @@ $("#" + id + " .taCopyText").select();
 				
 			break;
 			
-			case "In Warranty":
+			case "IW":
 				$("#" + id + " .taCopyText").val("Thank you for your confirmation. Just to let you know, your System still has an active Hardware Warranty valid till " + $("#" + id + " .txtExpDate").val() + ".");
 				
 				$("#" + id + " .cbToade").prop('checked', true);
@@ -19853,7 +19860,7 @@ $("#" + id + " .taCopyText").select();
 				document.execCommand('copy');
 				//pp
 			break;
-			case "Out Warranty":
+			case "OOW":
 				$("#" + id + " .taCopyText").val("Thank you for your confirmation. I'd like to inform you that your System's Hardware Warranty expired on " + $("#" + id + " .txtExpDate").val() + ".");
 				
 				$("#" + id + " .cbToade").prop('checked', true);
@@ -19862,14 +19869,14 @@ $("#" + id + " .taCopyText").select();
 				document.execCommand('copy');
 				
 			break;
-			case "Confirm Contact":
+			case "Phone & Email":
 				$("#" + id + " .taCopyText").val("I'd like to confirm that if in case we get disconnected from this chat, can I reach you on "+ $("#" + id + " .txtPhone").val() +" or email you at "+ $("#" + id + " .txtEmail").val() +"?");
 				
 				$("#" + id + " .taCopyText").select();
 				document.execCommand('copy');
 				
 			break;
-			case "I Will Call Back":
+			case "Disconnect OB":
 				$("#" + id + " .taCopyText").val("Perfect. If in case we get disconnected, keep your phone line free & please allow me 2-3 minutes to call you back. Alright?");
 				
 				$("#" + id + " .taCopyText").select();
@@ -20288,6 +20295,15 @@ $("#" + id + " .taCopyText").select();
 				
 			break;
 			
+			case "SmartID NBD":
+				$("#" + id + " .taCopyText").val("Please be aware that in order to make sure that the appropriate system is being serviced, the Onsite technician will be confirming the service tag before beginning repairs.");
+				$("#" + id + " .cbVdi").prop('checked', true);
+				
+				$("#" + id + " .taCopyText").select();
+				document.execCommand('copy');
+				
+			break;
+			
 			case "VDI DEPOT":
 				$("#" + id + " .taCopyText").val("Can you please provide\n\n1) Name and Phone Number (preferably of the person who will send the System to Depot) &\n2) Complete Address including Zip-Code where the Empty-Box & later the Repaired-System needs to be delivered?");
 				$("#" + id + " .cbVdi").prop('checked', true);
@@ -20367,7 +20383,14 @@ $("#" + id + " .taCopyText").select();
 				document.execCommand('copy');
 				
 			break;
-			
+			case "SmartID RTD":
+				$("#" + id + " .taCopyText").val("Please be aware that in order to make sure that the appropriate system is being serviced, the Depot technician will be confirming the service tag before beginning repairs.");
+				$("#" + id + " .cbVdi").prop('checked', true);
+				
+				$("#" + id + " .taCopyText").select();
+				document.execCommand('copy');
+				
+			break;
 			case "DEPOT-PPF-DPS":
 				$("#" + id + " .taCopyText").val("Based on the symptoms & troubleshooting results, it is evident that components internal to your system need to be replaced. Since your system has Prepaid-Freight Depot warranty, it needs to be sent to our Repair Center and the turn-around-time for the repair process would be 10-12 Business days. Let me set it up for you, Okay?");
 				//$("#" + id + " .cbPosd").prop('checked', true);
@@ -20484,7 +20507,9 @@ $("#" + id + " .taCopyText").select();
 			case "HEAT CHECK":
 				$("#" + id + " .taCopyText").val( $("#" + id + " .txtFname").val() + ", how was your Overall experience with Dell? Is there anything that we could have done better to improve our services?");
 				//$("#" + id + " .cbPosd").prop('checked', true);
-				
+				$("#" + id + " .selHeatCheck").prop('disabled', false);
+				$("#" + id + " .selHeatCheck").css('background-color', '#fff');
+				//$("#" + id + " .selHeatCheck").css('background-color', 'red');
 				$("#" + id + " .taCopyText").select();
 				document.execCommand('copy');
 				
@@ -20517,8 +20542,8 @@ $("#" + id + " .taCopyText").select();
 				
 			break;
 			
-			case "Follow-up":
-				$("#" + id + " .taCopyText").val("As discussed, I'd own & follow-up on this issue to confirm resolution. I already have your Phone number. What is the best-time to reach you?");
+			case "OWN + BTTR":
+				$("#" + id + " .taCopyText").val("Let me assure you that we'll own & follow-up on this issue till resolution. I already have your Phone number. What is the best-time to reach you?");
 				//$("#" + id + " .cbPosd").prop('checked', true);
 				
 				$("#" + id + " .taCopyText").select();
@@ -20553,7 +20578,7 @@ $("#" + id + " .taCopyText").select();
 				
 			break;
 			
-			case "WILL EMAIL":
+			case "MOXIE Email Edu":
 				$("#" + id + " .taCopyText").val("I'm going to send you Summary email at the end. It'll contain Service Request # & other vital info pertaining to today's Chat conversation.");
 				//$("#" + id + " .cbPosd").prop('checked', true);
 				
@@ -20562,7 +20587,7 @@ $("#" + id + " .taCopyText").select();
 				
 			break;
 			
-			case "REPLY EMAIL":
+			case "MOXIE Life-Line":
 				$("#" + id + " .taCopyText").val("Please reply back to that Email & my team would contact you. That way we can pick-up where we left-off & save you a lot of time & trouble.");
 				
 				$("#" + id + " .taCopyText").select();
@@ -20582,9 +20607,9 @@ $("#" + id + " .taCopyText").select();
 				
 			break;
 			
-			case "EDUCATE":
-				$("#" + id + " .taCopyText").val("You can always get support for your PC, including diagnostic tests, driver downloads, how-to articles, videos, FAQs on www.Dell.com/Support.");
-				//$("#" + id + " .cbPosd").prop('checked', true);
+			case "SDC Site Edu":
+				$("#" + id + " .taCopyText").val("You can always get support for your PC including System & Warranty info, Diagnostics, Drivers & Downloads, Dispatch status etc. on www.Dell.com/Support.");
+				$("#" + id + " .cbSdcSiteEdu").prop('checked', true);
 				
 				$("#" + id + " .taCopyText").select();
 				document.execCommand('copy');
@@ -20964,40 +20989,60 @@ $("#" + id + " .taCopyText").select();
 	//END FUNCTION
 	
 	
+	//AF LOGS water mark logic
 	
+	$('.taAfLogs').blur(function(){
+  		if ($(this).val().length == 0){
+    		$(this).val("Please Paste Copy-2-Clipboard log from Answer-Flow here.").addClass('watermark');
+		}
+ 	});
 	
+	$('.taAfLogs').focusin(function(){
+		
+  		if ($(this).val() == "Please Paste Copy-2-Clipboard log from Answer-Flow here."){
+    		$(this).val("").removeClass('watermark');;
+		}
+ 	});
 	
+	//AF LOGS  LOGIC end
 	
 	//if blur and no value inside, set watermark text and class again.
  	$('.txtPhysicalDamageDesc').blur(function(){
+		var adSpeil = "To maintain an accurate log & for requisite approvals, please respond to the following questions\n\nWhen & How did the damage occur?\nWhere was the system at the time of the incident?\nWhat is the extent of the damage?";
   		if ($(this).val().length == 0){
-    		$(this).val("Describe the nature of physical damage.").addClass('watermark');
+    		$(this).val(adSpeil).addClass('watermark');
 		}
  	});
 
 	//if focus and text is watermrk, set it to empty and remove the watermark class
 	$('.txtPhysicalDamageDesc').focus(function(){
-		
-  		if ($(this).val() == "Describe the nature of physical damage."){
+		var adSpeil = "To maintain an accurate log & for requisite approvals, please respond to the following questions\n\nWhen & How did the damage occur?\nWhere was the system at the time of the incident?\nWhat is the extent of the damage?";
+  		if ($(this).val() == adSpeil){
     		$(this).val('').removeClass('watermark');
 		}
  	});
 	
 	
 	// Is Physical Damage
+	<!-- To maintain an accurate log & for requisite approvals, please respond to the following questions - -->
+<!-- - When & How did the damage occur? -->
+<!-- - Where was the system at the time of the incident? -->
+<!-- - What is the extent of the damage? -->
+
 	
 	$('.selIsTherePhysicalDamage').on('change', function (e) {
 		
 		
 		var ids = $(this).closest('.tblcl').attr('id');
+		var adSpeil = "To maintain an accurate log & for requisite approvals, please respond to the following questions\n\nWhen & How did the damage occur?\nWhere was the system at the time of the incident?\nWhat is the extent of the damage?";
 		
-		if ($('.selIsTherePhysicalDamage').val() == "No") {
+		if ($(this).val() == "No") {
 		$("#" + ids + " .txtPhysicalDamageDesc").prop('disabled',true);
 		$("#" + ids + " .txtPhysicalDamageDesc").val("");
 		$("#" + ids + " .txtPhysicalDamageDesc").css('background-color',"#EEE");
 		}
 		else {
-			$("#" + ids + " .txtPhysicalDamageDesc").val("Describe the nature of physical damage.").addClass('watermark');
+			$("#" + ids + " .txtPhysicalDamageDesc").val(adSpeil).addClass('watermark');
 			$("#" + ids + " .txtPhysicalDamageDesc").prop('disabled',false);
 			$("#" + ids + " .txtPhysicalDamageDesc").css('background-color',"#fff");	
 		}
@@ -21131,13 +21176,13 @@ $("#" + id + " .taCopyText").select();
 			$("#" + id + " .tblL2Name").show();
 			$("#" + id + " .tblHddConcent").hide();
 			$("#" + id + " .tblAddress").show();
-			$("#" + id + " .tblDispatchNotes").hide();
+			$("#" + id + " .tblDispatchNotes").show();
 			
 			$("#" + id + " .tblDispatchSYSXC").hide();
 			$("#" + id + " .tblStamps").show();
 			$("#" + id + " .tblCopyText").show();
 			
-			//$("#" + id + " .taDispatchNotes").val("Replace Parts a necessary");
+			$("#" + id + " .taDispatchNotes").val("Replace Parts a necessary.\n- Ensure BIOS is updated after the service is done.\n- Run the ePSA test after the service is done\n- Transfer the stickers/service tag label if replacing part like base cover to the new one.");
 			
 			
 		}
@@ -21153,13 +21198,14 @@ $("#" + id + " .taCopyText").select();
 			$("#" + id + " .tblL2Name").show();
 			$("#" + id + " .tblHddConcent").hide();
 			$("#" + id + " .tblAddress").show();
-			$("#" + id + " .tblDispatchNotes").hide();
+			$("#" + id + " .tblDispatchNotes").show();
 			
 			$("#" + id + " .tblStamps").show();
 			$("#" + id + " .tblCopyText").show();
 			
 			$("#" + id + " .tblDispatchSYSXC").hide();
 			//$("#" + id + " .taDispatchNotes").val("Replace Parts a necessasry");
+			$("#" + id + " .taDispatchNotes").val("Replace Parts a necessary.\n- Ensure BIOS is updated after the service is done.\n- Run the ePSA test after the service is done\n- Transfer the stickers/service tag label if replacing part like base cover to the new one.");
 			
 		}
 		else if (valueSelected == "sysxc") {
@@ -21297,300 +21343,326 @@ $("#" + id + " .taCopyText").select();
 	function generateDeltaLogs(id) {
 		
 		
-		var deltaLogs = '';
-		
-		<!-- if ($("#" + id + " .txtFname").val() != "") { -->
-			<!-- deltaLogs = '- NAME: ' + $("#" + id + " .txtFname").val(); -->
-		<!-- } -->
-		
-		<!-- if ($("#" + id + " .txtSrvTag").val() != "") { -->
-		<!-- deltaLogs += '\n- SERVICE TAG: ' + $("#" + id + " .txtSrvTag").val(); -->
-		<!-- } -->
-		
-		<!-- if ($("#" + id + " .txtSysType").val() != "") { -->
-		<!-- deltaLogs += '\n- SYSTEM TYPE: ' + $("#" + id + " .txtSysType").val(); -->
-		<!-- } -->
-		
-		if($("#" + id + " .selDispatchType").val() == "ndps") {
-			deltaLogs += '** THIS IS A NON-DISPATCH CASE **\n\n';
+		if($("#" + id + " .selSmartId").val() != "0") {
+				var deltaLogs = '';
+				if($("#" + id + " .selDispatchType").val() == "ndps") {
+					deltaLogs += '** THIS IS A NON-DISPATCH CASE **\n\n';
+					
+				}
+				else if($("#" + id + " .selDispatchType").val() == "pos") {
+					deltaLogs += '** THIS IS A PARTS-ONLY SERVICE CASE **\n\n';
+				}
+				else if($("#" + id + " .selDispatchType").val() == "nbd") {
+					deltaLogs += '** THIS IS A NEXT BUSINESS DAY SERVICE CASE **\n\n';
+				}
+				else if($("#" + id + " .selDispatchType").val() == "rtd") {
+					deltaLogs += '** THIS IS A DEPOT / EXP DEPOT CASE **\n\n';
+				}
+				
+				
+				<!-- if ($("#" + id + " .txtSessionID").val() != "") { -->
+				<!-- deltaLogs += '- SESSION ID: ' + $("#" + id + " .txtSessionID").val(); -->
+				<!-- } -->
+				
+				deltaLogs += '\nSESSION ID: \n- ' + $("#" + id + " .txtSessionID").val();
+
+				deltaLogs += '\n\nSTAMPS:\n- '; 
+				
+				<!-- if ($("#" + id + " .cbVa").prop('checked')==true){  -->
+				<!-- //do something -->
+				<!-- deltaLogs += 'VA'; -->
+				<!-- } -->
+				<!-- else { -->
+					<!-- deltaLogs += 'VA NOT DONE'; -->
+				<!-- } -->
+				
+				deltaLogs += $("#" + id + " .selSmartId").val();
+				
+				if ($("#" + id + " .cbVdi").prop('checked')==true){ 
+				//do something
+				deltaLogs += '; VDI';
+				}
+				
+				if ($("#" + id + " .cbToade").prop('checked')==true){ 
+				//do something
+				deltaLogs += '; TOADE';
+				}
+				
+				if ($("#" + id + " .cbTat").prop('checked')==true){ 
+				//do something
+				deltaLogs += '; TAT';
+				}
+				
+				if ($("#" + id + " .cbTarp").prop('checked')==true){ 
+				//do something
+				deltaLogs += '; TARP';
+				}
+				
+				if ($("#" + id + " .cbHddDl").prop('checked')==true){ 
+				//do something
+				deltaLogs += '; DATA LOSS';
+				}
+				
+				
+				if ($("#" + id + " .cbPosd").prop('checked')==true){ 
+				//do something
+				deltaLogs += '; FRU TO CRU';
+				}
+				
+				if ($("#" + id + " .cbCidar").prop('checked')==true){ 
+				//do something
+				deltaLogs += '; CIDAR';
+				}
+				
+				if ($("#" + id + " .cbVkprs").prop('checked')==true){ 
+				//do something
+				deltaLogs += '; VKPRS';
+				}
+				
+				if ($("#" + id + " .cbGavesr").prop('checked')==true){ 
+				//do something
+				deltaLogs += '; GAVE SR';
+				}
+				
+				if ($("#" + id + " .cbSummarysent").prop('checked')==true){ 
+				//do something
+				deltaLogs += '; SUMMARY EMAIL SENT';
+				}
+				
+				
+				if ($("#" + id + " .cbSdcSiteEdu").prop('checked')==true){ 
+				//do something
+				deltaLogs += '; SDC Site Edu';
+				}
+				
+				
+				if ($("#" + id + " .cbNoi").prop('checked')==true){ 
+				//do something
+				deltaLogs += '; NOI';
+				}
+				
+				
+				deltaLogs += '\n\n\nCUSTOMER STATED ISSUE: \n' + $("#" + id + " .taCustomerConcern").val();
+				
+				deltaLogs += '\n\nANSFER FLOW LOGS : \n' + $("#" + id + " .taAfLogs").val();
+								
+				deltaLogs += '\n\nTROUBLESHOOTING PERFORMED: \n' + $("#" + id + " .taTroubleshootingLogs").val();
+				
+				deltaLogs += '\n\nNEXT STEP / SOLUTION: \n' + $("#" + id + " .taNextAction").val();
+				
+				deltaLogs += '\n\nORACLE ID: \n- ' + $("#" + id + " .txtOracleID").val() + "\n\n";
+				
+				
+				// if (session1_diagsRun == ''){
+					// alert("Please select the diagnostic test you used.");
+					// headerTabClick(currentSession, 'TS');
+					// return;
+				// }
+				
+				// deltaLogs += '\n\n DIAGNOSTIC:';
+				
+				// if($('.selDiagnosticRAN').val() == "notran") {
+					// deltaLogs += '\n- NOT RUN REASON: ' + $("#" + id + " #taNoDiagRunReason").val();
+				// }
+				// else if($('.selDiagnosticRAN').val() == "other") {
+					// deltaLogs += '\n- ' + $("#" + id + " #taOtherDiagRun").val();
+				// }
+				// else {
+					// deltaLogs += '\n- EPSA: ';
+					// if($("#" + id + " #selEpsaResult").val() == "pass") {
+						// deltaLogs += "Passed";
+					// }
+					// else {
+						// deltaLogs += "Failed" + "\n- Error Code : 2000 " + $(	
+			//"#" + id + " #txtErrCode").val();
+								// deltaLogs += "\n- Validation Code : 2000 " + $("#" + id + " #txtValidationCode").val();
+						// deltaLogs += "\n- Validity : 2000 " + $("#" + id + " #txtValidationDate").val();
+					// }
+				// }
+				
+				// deltaLogs += '\n- Part to replace: ' + $("#" + id + " #txtPartToReplace").val();
+				
+				
+				
+				if($("#" + id + " .selDispatchType").val() == "ndps") {
+					//deltaLogs += '\n\n** THIS IS A NON-DISPATCH CALL **\n\n';
+					
+				}
+				else {
+					deltaLogs += '\nL2 ' +  $("#" + id + " .selL2Name").val() + ' APPROVED DPS for ' + $("#" + id + " .txtPartToReplace").val() + "\n\n";
+				}
+				
+				
+				
+				// TO DO VPRSD PARTS
+				//session1_deltaLog += '\n- Additional Parts (VPKRS): ' + session1_plasticToReplace;
+				
+				
+				if($("#" + id + " #cbDl").prop('checked')==true) {
+					deltaLogs += '\n- EDUCATE CX ABOUT HDD DATA LOSS';
+				}
+				
+				if($("#" + id + " #cbPosd").prop('checked')==true) {
+					deltaLogs += '\n- FRU TO CRU, CX AGREE WITH POS DISCLAIMER';
+				}
+				
+				
+				
+				
+			  // if (session1_HDDConsent != ''){
+				// if(session1_HDDConsent=='Accept')
+				  // session1_deltaLog += '\n- Additional note to depot: CUSTOMER IS OKAY WITH HDD RE-IMAGE/REPLACEMENT AND AWARE OF DATA LOSS.';
+				// else
+				  // session1_deltaLog += '\n- Additional note to depot: ** DO NOT REPLACE / RE-IMAGE THE HARD DRIVE **';
+			  // }
+
+			  // if (session1_MediaCheck != ''){
+				// if(session1_MediaCheck == '')
+				  // session1_deltaLog += '';
+				// else if(session1_MediaCheck == 'N/A')
+				  // session1_deltaLog += '\n- Media Check: Not applicable for this dispatch';
+				// else if(session1_MediaCheck =='YES')
+				  // session1_deltaLog += '\n- Media Check: Will send media';
+				// else if(session1_MediaCheck =='NO')
+				  // session1_deltaLog += '\n- Media Check: Offered media, customer declined';
+				// else if(session1_MediaCheck == 'YES-M')
+				  // session1_deltaLog += '\n- Media Check: This is a Media ONLY DPS';
+			  // }
+				
+				
+				//deltaLogs += '\n- SERVICE REQUEST #: '  + $("#" + id + " .txtServiceRequest").val();
+				//deltaLogs += '\n- DISPATCH #: '  + $("#" + id + " .txtDispatchNumber").val();
+				
+				deltaLogs += '\n- BTTR: ' + $("#" + id + " .txtBttr").val();
+				
+				//deltaLogs += '\n\n- Gave Service Request Number, email: ' +  + $("#" + id + " .txtSupportEmailId").val();;
+				//deltaLogs += '\n- Email Address and Phone Number Obtained and Updated in SR';
+				
+				deltaLogs += '\n- HEAT CHECK : '  + $("#" + id + " .selHeatCheck").val();
+				
+				deltaLogs += '\n- SELF RATING : '  + $("#" + id + " .selSelfRating").val();
+				
+				//deltaLogs += '\n- Sent Summary Email';
+				
+				
+				
+				
+				
+				 
+				 $("#" + id + " .taDl").val(deltaLogs);
+						 
+				 var gl  = "Issue Description\n";
+				 gl += '- ' + $("#" + id + " .hfIssueInShort").val();
+				 gl += '\n\n';
+				 
+				 gl += "Troubleshooting Summary\n";
+				 gl += '' + $("#" + id + " .taTroubleshootingLogs").val();
+				 gl += '\n\n';
+				 
+				 if ($("#" + id + " .cbHddDl").prop('checked')==true){ 
+				//do something
+					gl += 'DATA LOSS informed. Cx acknowledged.\n';
+				}
+				
+				
+				if ($("#" + id + " .cbCidar").prop('checked')==true){ 
+				//do something
+					gl += 'CIDAR informed. Cx acknowledged.\n';
+				}
+				gl += '\n';
+				 
+				 gl += "Diagnostics Status\n";
+				 //gl += '- ' + $("#" + id + " .txtPartToReplace").val();
+				 gl += '\n\n';
+				 
+				 
+				 
+				 gl += "Best Time To Reach\n";
+				 gl += '- ' + $("#" + id + " .txtBttr").val();
+				 gl += '\n\n';
+				 
+				 gl += "Suggested Next Steps\n";
+				 gl += '- ' + $("#" + id + " .taNextAction").val();
+				 gl += '\n';
+				 gl += '- ' + $("#" + id + " .taDispatchNotes").val();
+				 gl += '\n\n';
+				 
+				 <!-- gl += "PHONE\n"; -->
+				 <!-- gl += '- ' + $("#" + id + " .txtPhone").val() + '\n- ' + $("#" + id + " .txtAltPhone").val(); -->
+				 <!-- gl += '\n\n'; -->
+				 
+				
+				 
+				 
+				 
+				 $("#" + id + " .taGl").val(gl);
+				
+				
+				// SR TITLE and DELTA NEXT ACTION
+				
+				var srTitle = "";
+				
+				if($("#" + id + " .selDispatchType").val() == "ndps") {
+					srTitle += "NDPS" + " - " +  $("#" + id + " .hfIssueInShort").val() + " - " + $("#" + id + " .taNextAction").val();
+					$("#" + id + " .txtDeltaNextAction").val("Follow-up for NDPS");
+				}
+				else if ($("#" + id + " .selDispatchType").val() == "pos") {
+					srTitle += "POS" + " - " +  $("#" + id + " .hfIssueInShort").val() + " - " + $("#" + id + " .taNextAction").val();
+					$("#" + id + " .txtDeltaNextAction").val("Follow-up for POS");
+				}
+				else if ($("#" + id + " .selDispatchType").val() == "nbd") {
+					srTitle += "NBD" + " - " +  $("#" + id + " .hfIssueInShort").val() + " - " + $("#" + id + " .taNextAction").val();
+					$("#" + id + " .txtDeltaNextAction").val("Follow-up for NBD");
+				}
+				else {
+					// ELSE RTD
+					srTitle += "RTD" + " - " +  $("#" + id + " .hfIssueInShort").val() + " - " + $("#" + id + " .taNextAction").val();
+					$("#" + id + " .txtDeltaNextAction").val("Follow-up for BOX");
+				}
+				
+				$("#" + id + " .taSrTitle").val(srTitle);
+				
+				
+				//  txtEmailSubjectLine
+				
+				
+				
+				$("#" + id + " .taEmailSubjectLine").val("#RT# Dell Basic Warranty Support | Service Request Number : " + $("#" + id + " .txtServiceRequest").val());
+				
+				$("#" + id + " .aCopyDl").click(function() {
+					$("#" + id + " .taDl").select();
+						document.execCommand('copy');
+				});
+				
+				$("#" + id + " .aCopyGl").click(function() {
+					$("#" + id + " .taGl").select();
+						document.execCommand('copy');
+				});
+				
+				$("#" + id + " .aCopySrTitle").click(function() {
+					$("#" + id + " .taSrTitle").select();
+						document.execCommand('copy');
+				});
+				
+				$("#" + id + " .aCopyDeltaNextAction").click(function() {
+					$("#" + id + " .txtDeltaNextAction").select();
+						document.execCommand('copy');
+				});
+				
+				$("#" + id + " .aCopyEmailSubjectLine").click(function() {
+					$("#" + id + " .taEmailSubjectLine").select();
+						document.execCommand('copy');
+				});
+		}
+		else {
+			
+			$("#" + id + " .taDl").val("PLEASE SELECT THE SMART ID METHOD");
+			$("#" + id + " .taEmailSubjectLine").val("");
+			$("#" + id + " .taGl").val("");
+			$("#" + id + " .taSrTitle").val("");
+			$("#" + id + " .txtDeltaNextAction").val("");
 			
 		}
-		else if($("#" + id + " .selDispatchType").val() == "pos") {
-			deltaLogs += '** THIS IS A PARTS-ONLY SERVICE CASE **\n\n';
-		}
-		else if($("#" + id + " .selDispatchType").val() == "nbd") {
-			deltaLogs += '** THIS IS A NEXT BUSINESS DAY SERVICE CASE **\n\n';
-		}
-		else if($("#" + id + " .selDispatchType").val() == "rtd") {
-			deltaLogs += '** THIS IS A DEPOT / EXP DEPOT CASE **\n\n';
-		}
-		
-		
-		<!-- if ($("#" + id + " .txtSessionID").val() != "") { -->
-		<!-- deltaLogs += '- SESSION ID: ' + $("#" + id + " .txtSessionID").val(); -->
-		<!-- } -->
-		
-		deltaLogs += '\nSESSION ID: \n- ' + $("#" + id + " .txtSessionID").val();
-
-		deltaLogs += '\n\nSTAMPS:\n- '; 
-		
-		if ($("#" + id + " .cbVa").prop('checked')==true){ 
-        //do something
-		deltaLogs += 'VA';
-		}
-		else {
-			deltaLogs += 'VA NOT DONE';
-		}
-		
-		if ($("#" + id + " .cbVdi").prop('checked')==true){ 
-        //do something
-		deltaLogs += '; VDI';
-		}
-		
-		if ($("#" + id + " .cbToade").prop('checked')==true){ 
-        //do something
-		deltaLogs += '; TOADE';
-		}
-		
-		if ($("#" + id + " .cbTat").prop('checked')==true){ 
-        //do something
-		deltaLogs += '; TAT';
-		}
-		
-		if ($("#" + id + " .cbTarp").prop('checked')==true){ 
-        //do something
-		deltaLogs += '; TARP';
-		}
-		
-		if ($("#" + id + " .cbHddDl").prop('checked')==true){ 
-        //do something
-		deltaLogs += '; DATA LOSS';
-		}
-		
-		
-		if ($("#" + id + " .cbPosd").prop('checked')==true){ 
-        //do something
-		deltaLogs += '; FRU TO CRU';
-		}
-		
-		if ($("#" + id + " .cbCidar").prop('checked')==true){ 
-        //do something
-		deltaLogs += '; CIDAR';
-		}
-		
-		if ($("#" + id + " .cbVkprs").prop('checked')==true){ 
-        //do something
-		deltaLogs += '; VKPRS';
-		}
-		
-		if ($("#" + id + " .cbGavesr").prop('checked')==true){ 
-        //do something
-		deltaLogs += '; GAVE SR';
-		}
-		
-		if ($("#" + id + " .cbSummarysent").prop('checked')==true){ 
-        //do something
-		deltaLogs += '; SUMMARY EMAIL SENT';
-		}
-		
-		if ($("#" + id + " .cbNoi").prop('checked')==true){ 
-        //do something
-		deltaLogs += '; NOI';
-		}
-		
-		
-		deltaLogs += '\n\n\nCUSTOMER STATED ISSUE: \n' + $("#" + id + " .taCustomerConcern").val();
-		
-		deltaLogs += '\n\nTROUBLESHOOTING PERFORMED: \n' + $("#" + id + " .taTroubleshootingLogs").val();
-		
-		deltaLogs += '\n\nNEXT STEP / SOLUTION: \n' + $("#" + id + " .taNextAction").val();
-		
-		deltaLogs += '\n\nORACLE ID: \n- ' + $("#" + id + " .txtOracleID").val() + "\n\n";
-		
-		
-		// if (session1_diagsRun == ''){
-			// alert("Please select the diagnostic test you used.");
-			// headerTabClick(currentSession, 'TS');
-			// return;
-		// }
-		
-		// deltaLogs += '\n\n DIAGNOSTIC:';
-		
-		// if($('.selDiagnosticRAN').val() == "notran") {
-			// deltaLogs += '\n- NOT RUN REASON: ' + $("#" + id + " #taNoDiagRunReason").val();
-		// }
-		// else if($('.selDiagnosticRAN').val() == "other") {
-			// deltaLogs += '\n- ' + $("#" + id + " #taOtherDiagRun").val();
-		// }
-		// else {
-			// deltaLogs += '\n- EPSA: ';
-			// if($("#" + id + " #selEpsaResult").val() == "pass") {
-				// deltaLogs += "Passed";
-			// }
-			// else {
-				// deltaLogs += "Failed" + "\n- Error Code : 2000 " + $(	
-	//"#" + id + " #txtErrCode").val();
-						// deltaLogs += "\n- Validation Code : 2000 " + $("#" + id + " #txtValidationCode").val();
-				// deltaLogs += "\n- Validity : 2000 " + $("#" + id + " #txtValidationDate").val();
-			// }
-		// }
-		
-		// deltaLogs += '\n- Part to replace: ' + $("#" + id + " #txtPartToReplace").val();
-		
-		
-		
-		if($("#" + id + " .selDispatchType").val() == "ndps") {
-			//deltaLogs += '\n\n** THIS IS A NON-DISPATCH CALL **\n\n';
-			
-		}
-		else {
-			deltaLogs += '\nL2 ' +  $("#" + id + " .selL2Name").val() + ' APPROVED DPS for ' + $("#" + id + " .txtPartToReplace").val() + "\n\n";
-		}
-		
-		
-		
-		// TO DO VPRSD PARTS
-		//session1_deltaLog += '\n- Additional Parts (VPKRS): ' + session1_plasticToReplace;
-		
-		
-		if($("#" + id + " #cbDl").prop('checked')==true) {
-			deltaLogs += '\n- EDUCATE CX ABOUT HDD DATA LOSS';
-		}
-		
-		if($("#" + id + " #cbPosd").prop('checked')==true) {
-			deltaLogs += '\n- FRU TO CRU, CX AGREE WITH POS DISCLAIMER';
-		}
-		
-		
-		
-		
-	  // if (session1_HDDConsent != ''){
-		// if(session1_HDDConsent=='Accept')
-		  // session1_deltaLog += '\n- Additional note to depot: CUSTOMER IS OKAY WITH HDD RE-IMAGE/REPLACEMENT AND AWARE OF DATA LOSS.';
-		// else
-		  // session1_deltaLog += '\n- Additional note to depot: ** DO NOT REPLACE / RE-IMAGE THE HARD DRIVE **';
-	  // }
-
-	  // if (session1_MediaCheck != ''){
-		// if(session1_MediaCheck == '')
-		  // session1_deltaLog += '';
-		// else if(session1_MediaCheck == 'N/A')
-		  // session1_deltaLog += '\n- Media Check: Not applicable for this dispatch';
-		// else if(session1_MediaCheck =='YES')
-		  // session1_deltaLog += '\n- Media Check: Will send media';
-		// else if(session1_MediaCheck =='NO')
-		  // session1_deltaLog += '\n- Media Check: Offered media, customer declined';
-		// else if(session1_MediaCheck == 'YES-M')
-		  // session1_deltaLog += '\n- Media Check: This is a Media ONLY DPS';
-	  // }
-		
-		
-		deltaLogs += '\n- SERVICE REQUEST #: '  + $("#" + id + " .txtServiceRequest").val();
-		deltaLogs += '\n- DISPATCH #: '  + $("#" + id + " .txtDispatchNumber").val();
-		
-		deltaLogs += '\n- BTTR: ' + $("#" + id + " .txtBttr").val();
-		
-		//deltaLogs += '\n\n- Gave Service Request Number, email: ' +  + $("#" + id + " .txtSupportEmailId").val();;
-		//deltaLogs += '\n- Email Address and Phone Number Obtained and Updated in SR';
-		
-		deltaLogs += '\n- HEAT CHECK : '  + $("#" + id + " .selHeatCheck").val();
-		
-		deltaLogs += '\n- SELF RATING : '  + $("#" + id + " .selSelfRating").val();
-		
-		//deltaLogs += '\n- Sent Summary Email';
-		
-		
-		
-		
-		
-		 
-		 $("#" + id + " .taDl").val(deltaLogs);
-		 		 
-		 var gl  = "ISSUE\n";
-		 gl += '- ' + $("#" + id + " .hfIssueInShort").val();
-		 gl += '\n\n';
-		 
-		 gl += "TS\n";
-		 gl += '' + $("#" + id + " .taTroubleshootingLogs").val();
-		 gl += '\n\n';
-		 
-		 //gl += "SUSPECTED PART\n";
-		 //gl += '- ' + $("#" + id + " .txtPartToReplace").val();
-		 //gl += '\n\n';
-		 
-		 
-		 
-		 gl += "SOLUTION\n";
-		 gl += '- ' + $("#" + id + " .taNextAction").val();
-		 gl += '\n\n';
-		 
-		 gl += "PHONE\n";
-		 gl += '- ' + $("#" + id + " .txtPhone").val() + '\n- ' + $("#" + id + " .txtAltPhone").val();
-		 gl += '\n\n';
-		 
-		 gl += "BTTR\n";
-		 gl += '- ' + $("#" + id + " .txtBttr").val();
-		 
-		 
-		 
-		 $("#" + id + " .taGl").val(gl);
-		
-		
-		// SR TITLE and DELTA NEXT ACTION
-		
-		var srTitle = "";
-		
-		if($("#" + id + " .selDispatchType").val() == "ndps") {
-			srTitle += "NDPS" + " | " +  $("#" + id + " .hfIssueInShort").val() + " | " + $("#" + id + " .taNextAction").val();
-			$("#" + id + " .txtDeltaNextAction").val("Follow-up for NDPS");
-		}
-		else if ($("#" + id + " .selDispatchType").val() == "pos") {
-			srTitle += "POS" + " | " +  $("#" + id + " .hfIssueInShort").val() + " | " + $("#" + id + " .taNextAction").val();
-			$("#" + id + " .txtDeltaNextAction").val("Follow-up for POS");
-		}
-		else if ($("#" + id + " .selDispatchType").val() == "nbd") {
-			srTitle += "NBD" + " | " +  $("#" + id + " .hfIssueInShort").val() + " | " + $("#" + id + " .taNextAction").val();
-			$("#" + id + " .txtDeltaNextAction").val("Follow-up for NBD");
-		}
-		else {
-			// ELSE RTD
-			srTitle += "RTD" + " | " +  $("#" + id + " .hfIssueInShort").val() + " | " + $("#" + id + " .taNextAction").val();
-			$("#" + id + " .txtDeltaNextAction").val("Follow-up for BOX");
-		}
-		
-		$("#" + id + " .taSrTitle").val(srTitle);
-		
-		
-		//  txtEmailSubjectLine
-		
-		
-		
-		$("#" + id + " .taEmailSubjectLine").val("#RT# Dell Basic Warranty Support | Service Request Number : " + $("#" + id + " .txtServiceRequest").val());
-		
-		$("#" + id + " .aCopyDl").click(function() {
-			$("#" + id + " .taDl").select();
-				document.execCommand('copy');
-		});
-		
-		$("#" + id + " .aCopyGl").click(function() {
-			$("#" + id + " .taGl").select();
-				document.execCommand('copy');
-		});
-		
-		$("#" + id + " .aCopySrTitle").click(function() {
-			$("#" + id + " .taSrTitle").select();
-				document.execCommand('copy');
-		});
-		
-		$("#" + id + " .aCopyDeltaNextAction").click(function() {
-			$("#" + id + " .txtDeltaNextAction").select();
-				document.execCommand('copy');
-		});
-		
-		$("#" + id + " .aCopyEmailSubjectLine").click(function() {
-			$("#" + id + " .taEmailSubjectLine").select();
-				document.execCommand('copy');
-		});
 		
 		
 		
@@ -21763,21 +21835,19 @@ Howdy!
 													
 													<tr class="tbdCustInfoRow">
 														<td style="">TAG:<br/><input type="text" class="form-control txtSrvTag" id=""  /></td>
-														<td>MODEL:<br/><input type="text" class="form-control txtSysType" id=""   /></td>
-														<td>EXP DATE:<br/><input type="text" class="form-control txtExpDate"  id=""  /></td>
+														<td>MODEL:<br/><input type="text" class="form-control txtSysType" id="" style="background-color:	#FFFFE0;"  /></td>
+														<td>EXP DATE:<br/><input type="text" class="form-control txtExpDate"  id="" style="background-color:	#FFFFE0;"  /></td>
 													</tr>
 													<tr class="tbdCustInfoRow">
-														<td>WARRANTY TYPE:<br/>
-															<select class="form-control selWarrantyType" id="">
-																<option>ONSITE</option>
-																<option>MAIL IN</option>
-																<option>OTHER</option>
-															</select>
-														</td>
-														<td>BTTR:<br/><input type="text" class="form-control txtBttr" id=""   /></td>
+														<!-- <td>WARRANTY TYPE:<br/> -->
+															<!-- <select class="form-control selWarrantyType" id=""> -->
+																<!-- <option>ONSITE</option> -->
+																<!-- <option>MAIL IN</option> -->
+																<!-- <option>OTHER</option> -->
+															<!-- </select> -->
+														<!-- </td> -->
+														<td>BTTR:<br/><input type="text" class="form-control txtBttr" id="" style="background-color:	#FFFFE0;"   /></td>
 														<td>SESSION ID:<br/><input type="text" class="form-control txtSessionID" id="" /></td>
-													</tr>
-													<tr class="tbdCustInfoRow">
 														<td>IS CHAT TRANSFERED?
 															<select class="form-control selIsChatTransfered" id="">
 																<option value="No" selected="selected" >No</option>
@@ -21785,9 +21855,18 @@ Howdy!
 															
 															</select>
 														</td>
-														<td></td>
-														<td></td>
 													</tr>
+													<!-- <tr class="tbdCustInfoRow"> -->
+														<!-- <td>IS CHAT TRANSFERED? -->
+															<!-- <select class="form-control selIsChatTransfered" id=""> -->
+																<!-- <option value="No" selected="selected" >No</option> -->
+																<!-- <option value="Yes">Yes</option> -->
+															
+															<!-- </select> -->
+														<!-- </td> -->
+														<!-- <td></td> -->
+														<!-- <td></td> -->
+													<!-- </tr> -->
 												</table>
 											</td>
 										<tr>
@@ -21804,16 +21883,18 @@ Howdy!
 												<br/>
 																								
 												<button class="btn btn-default" type="submit">Hello</button>
+												<button class="btn btn-default" type="submit">Confirm Issue ?</button>
+												
+												<button class="btn btn-default" type="submit">Empathy</button>
+												
+												<input type="hidden" name="hfIssueInShort" class="hfIssueInShort" value="">
+												
+												<br/>
 												
 												
 												<button class="btn btn-default" type="submit">Repeat Caller</button>
 												<button class="btn btn-default" type="submit">Repeat Caller Apologise</button>
-												
-												<button class="btn btn-default" type="submit">Confirm Issue ?</button>
-												
-												<input type="hidden" name="hfIssueInShort" class="hfIssueInShort" value="">
-												
-												<button class="btn btn-default" type="submit">Empathy</button>
+
 												<button class="btn btn-default" type="submit">Assurance</button>
 												
 												
@@ -21887,24 +21968,37 @@ Howdy!
 												
 												VERIFICATION:<br/>
 												
-												<button class="btn btn-default" type="submit">Tag?</button>
+												<button class="btn btn-default" type="submit">System + Tag</button>
 												<!-- <button class="btn btn-default" type="submit">TOADE</button> -->
 												
-												<button class="btn btn-default" type="submit">In Warranty</button>
-												<button class="btn btn-default" type="submit">Out Warranty</button>
+												<button class="btn btn-default" type="submit">IW</button>
+												<button class="btn btn-default" type="submit">OOW</button>
 												<!-- <button class="btn btn-default" type="submit">TOADE</button> -->
 												
 												<!-- <button class="btn btn-default" type="submit">Probe Permit</button> -->
 												<!-- <button class="btn btn-default" type="submit">Game Plan</button> -->
 												
-												<button class="btn btn-default" type="submit">Confirm Contact</button>
-												<button class="btn btn-default" type="submit">I Will Call Back</button>
-																								
-												<button class="btn btn-default" type="submit">VA</button>
+												<button class="btn btn-default" type="submit">Phone & Email</button>
+												<button class="btn btn-default" type="submit">Disconnect OB</button>
+												
+												<button class="btn btn-default btn-nogradient btn-100perwidth btn-script " type="submit">OWN + BTTR </button>
+												<!-- <button class="btn btn-default" type="submit">VA</button> -->
 												<button class="btn btn-default" type="submit">At System</button>
 												
 												<br/><br/>
+												DELL SMART ID:<br/>
 												
+												<select id="" class="form-control selSmartId">
+													<option value="0">SELECT DELL SMART ID METHOD</option>
+													<option value="SMART ID - BIOS">BIOS</option>
+													<option value="SMART ID - EPSA">EPSA</option>
+													<option value="SMART ID - PPID">PPID</option>
+													<option value="SMART ID - DELL-CONNECT">DELL-CONNECT</option>
+													<option value="SMART ID - NBD / RTD">NBD / RTD</option>
+													<option value="SMART ID - DOMAIN">DOMAIN (Only IT)</option>
+												</select>
+												
+												<br/><br/>
 												PROBE:<br/>
 												<button class="btn btn-default" type="submit">Permit</button>
 												<button class="btn btn-default" type="submit">1st</button>
@@ -21972,8 +22066,8 @@ Howdy!
 												<!-- </textarea> -->
 												<!-- <br/> -->
 												<!-- </div> -->
-												ORACLE ID:
-												<input type="text" class="form-control txtOracleID" id="" />
+												ANSWER-FLOW LOG:
+												<textarea class="form-control taAfLogs" id=""></textarea>
 												<br/>
 												
 												TECH RESPONSE / TROUBLESHOOTING LOGS:
@@ -22008,79 +22102,79 @@ Howdy!
 												
 												
 												
-												<!-- <br/> -->
-												<!-- DIAGNOSTICS: -->
-												<!-- <select id="selDiagnosticRAN" class="form-control selDiagnosticRAN"> -->
-													<!-- <option value="notrun">Not Run</option> -->
-													<!-- <option value="epsa">ePSA</option> -->
-													<!-- <option value="other">Other</option> -->
-												<!-- </select> -->
-												<!-- <br/> -->
-												
-												<!-- <table class="tblEpsaDiagTest"> -->
-													<!-- <tr> -->
-														
-														<!-- <td> -->
-															<!-- ePSA STATE: -->
-															<!-- <select id="selEpsaResult" class="form-control selEpsaResult"> -->
-																<!-- <option value="pass">Pass</option> -->
-																<!-- <option value="fail">Fail</option> -->
-															<!-- </select> -->
-															<!-- <br/> -->
-														<!-- </td> -->
-													<!-- </tr> -->
-													<!-- <tr> -->
-														
-														<!-- <td> -->
-															<!-- <table class="tblEpsaErrorCodes"> -->
-																<!-- <tr> -->
-																	<!-- <td style="padding:0px;" colspan="2"> -->
-																		<!-- ERR CODE:																	 -->
-																	<!-- </td> -->
-																<!-- </tr> -->
-																<!-- <tr> -->
-																	<!-- <td style="padding:0px;"> -->
-																		<!-- <input type="text" class="form-control" id="txtErrCode2000" value="2000"   /> -->
-																	<!-- </td> -->
-																	<!-- <td style="padding:0px;"> -->
-																		<!-- <input type="text" class="form-control" id="txtErrCode" /> -->
-																	<!-- </td> -->
-																<!-- </tr> -->
-																<!-- <tr> -->
-																	<!-- <td style="padding:0px;" colspan="2"> -->
-																		<!-- VALIDATION CODE: -->
-																		<!-- <input type="text" class="form-control" id="txtValidationCode" />														 -->
-																	<!-- </td> -->
-																<!-- </tr> -->
-																<!-- <tr> -->
-														
-																	<!-- <td style="padding:0px;" colspan="2">DATE:<input type="text" class="form-control" id="txtValidationDate" disabled="disabled" /></td> -->
-																<!-- </tr> -->
-															<!-- </table> -->
-														
-														
-														
-														<!-- </td> -->
-													<!-- </tr> -->
-												<!-- </table> -->
+												<br/>
+												DIAGNOSTICS:<br/>
+												<select id="selDiagnosticRAN" class="form-control selDiagnosticRAN">
+													<option value="notrun">Not Run</option>
+													<option value="epsa">ePSA</option>
+													<option value="other">Other</option>
+												</select>
 												
 												
-												<!-- <table class="tblNoDiagTestRan"> -->
-													<!-- <tr> -->
-														<!-- <td>NO DIAGNOSTICS RUN REASON: -->
-															<!-- <textarea class="form-control" style="height:70px;" id="taNoDiagRunReason"></textarea> -->
-														<!-- </td> -->
-													<!-- </tr> -->
-												<!-- </table> -->
+												<table class="tblEpsaDiagTest">
+													<tr>
+														
+														<td>
+															ePSA STATE:
+															<select id="selEpsaResult" class="form-control selEpsaResult">
+																<option value="pass">Pass</option>
+																<option value="fail">Fail</option>
+															</select>
+															<br/>
+														</td>
+													</tr>
+													<tr>
+														
+														<td>
+															<table class="tblEpsaErrorCodes">
+																<tr>
+																	<td style="padding:0px;" colspan="2">
+																		ERR CODE:																	
+																	</td>
+																</tr>
+																<tr>
+																	<td style="padding:0px;">
+																		<input type="text" class="form-control" id="txtErrCode2000" value="2000"   />
+																	</td>
+																	<td style="padding:0px;">
+																		<input type="text" class="form-control" id="txtErrCode" />
+																	</td>
+																</tr>
+																<tr>
+																	<td style="padding:0px;" colspan="2">
+																		VALIDATION CODE:
+																		<input type="text" class="form-control" id="txtValidationCode" />														
+																	</td>
+																</tr>
+																<tr>
+														
+																	<td style="padding:0px;" colspan="2">DATE:<input type="text" class="form-control" id="txtValidationDate" disabled="disabled" /></td>
+																</tr>
+															</table>
+														
+														
+														
+														</td>
+													</tr>
+												</table>
 												
 												
-												<!-- <table class="tblOtherDiagTestRan"> -->
-													<!-- <tr> -->
-														<!-- <td>OTHER DIAGNOSTICS RUN: -->
-															<!-- <textarea class="form-control" style="height:70px;" id="taOtherDiagRun"></textarea> -->
-														<!-- </td> -->
-													<!-- </tr> -->
-												<!-- </table> -->
+												<table class="tblNoDiagTestRan">
+													<tr>
+														<td>NO DIAGNOSTICS RUN REASON:
+															<textarea class="form-control" style="height:70px;" id="taNoDiagRunReason"></textarea>
+														</td>
+													</tr>
+												</table>
+												
+												
+												<table class="tblOtherDiagTestRan">
+													<tr>
+														<td>OTHER DIAGNOSTICS RUN:
+															<textarea class="form-control" style="height:70px;" id="taOtherDiagRun"></textarea>
+														</td>
+													</tr>
+												</table>
 												
 												
 												
@@ -22238,6 +22332,7 @@ Howdy!
 															
 																
 																<button class="btn btn-default btn-nogradient btn-100perwidth btn-script " type="submit">Dispatch NBD</button>
+																<button class="btn btn-default btn-nogradient btn-100perwidth btn-script " type="submit">SmartID NBD</button>
 																<button class="btn btn-default btn-nogradient btn-100perwidth btn-script " type="submit">FRU to CRU</button>
 																<button class="btn btn-default btn-nogradient btn-100perwidth btn-script " type="submit">HDD Data Loss</button>
 																<button class="btn btn-default btn-nogradient btn-100perwidth btn-script " type="submit">NBD TAT</button>
@@ -22266,6 +22361,8 @@ Howdy!
 																	
 																	<button class="btn btn-default btn-nogradient btn-100perwidth btn-script " type="submit">EXP-DEPOT</button>
 																	
+																	<button class="btn btn-default btn-nogradient btn-100perwidth btn-script " type="submit">SmartID RTD</button>
+																	<br/>
 																	<button class="btn btn-default btn-nogradient btn-100perwidth btn-script " type="submit">DEPOT-PPF-DPS</button>
 																	
 																	<button class="btn btn-default btn-nogradient btn-100perwidth btn-script " type="submit">DEPOT-PPF-TAT</button>
@@ -22325,7 +22422,7 @@ Howdy!
 																L2 NAME:
 																<select id="" class="form-control selL2Name">
 																	<option value="Ajinkya Dumbre"  selected="selected" >Ajinkya Dumbre</option>
-																	<option value="Ggandeep Saini">Ggandeep Saini</option>
+																	<option value="Gagandeep Saini">Ggandeep Saini</option>
 																	<option value="Sachin Ulape">Sachin Ulape</option>
 																	<option value="Siddhi Bhattacharya">Siddhi Bhattacharya</option>
 																	<option value="Kapil Sadwani">Kapil Sadwani</option>
@@ -22451,15 +22548,15 @@ Howdy!
 												
 												<br/><br/>
 												CLOSING:<br/>
-												<button class="btn btn-default btn-nogradient btn-100perwidth btn-script " type="submit">Follow-up</button>
+												
 												<button class="btn btn-default btn-nogradient btn-100perwidth btn-script " type="submit">SR No.</button>
 												<button class="btn btn-default btn-nogradient btn-100perwidth btn-script " type="submit">DPS No.</button>
 												
-												<button class="btn btn-default btn-nogradient btn-100perwidth btn-script " type="submit">WILL EMAIL</button>
-												<button class="btn btn-default btn-nogradient btn-100perwidth btn-script " type="submit">REPLY EMAIL</button>
+												<button class="btn btn-default btn-nogradient btn-100perwidth btn-script " type="submit">MOXIE Email Edu</button>
+												<button class="btn btn-default btn-nogradient btn-100perwidth btn-script " type="submit">MOXIE Life-Line</button>
 												
 												<button class="btn btn-default btn-nogradient btn-100perwidth btn-script " type="submit">Anything Else?</button>
-												<button class="btn btn-default btn-nogradient btn-100perwidth btn-script " type="submit">EDUCATE</button>
+												<button class="btn btn-default btn-nogradient btn-100perwidth btn-script " type="submit">SDC Site Edu</button>
 												
 												<button class="btn btn-default btn-nogradient btn-100perwidth btn-script " type="submit">CLOSE</button>
 
@@ -22476,11 +22573,11 @@ Howdy!
 												
 												
 												HEAT CHECK:
-												<select id="" class="form-control selHeatCheck">
-													<option value="Sat"  selected="selected" >Sat</option>
+												<select id="" class="form-control selHeatCheck" disabled="">
+													<option value="N/A">N/A</option>
+													<option value="Sat">Sat</option>
 													<option value="Neutral">Neutral</option>
 													<option value="Dsat">Dsat</option>
-													<option value="N/A">N/A</option>
 												</select><br/>
 												
 												SELF RATING:
@@ -22616,12 +22713,13 @@ Howdy!
 											</td>
 										</tr>
 										
-										<tr class="">
-											<td colspan=""> <label><input type="checkbox" id="" class="cbVa" /> VA</label> </td>
-											<td colspan=""> <label><input type="checkbox" id="" class="cbVdi"  /> VDI</label> </td>
-											<td colspan=""> <label><input type="checkbox" id="" class="cbToade"  /> TOADE</label> </td>
-											<td colspan=""> <label><input type="checkbox" id="" class="cbTat"  /> TAT</label> </td>
-										</tr>
+										<!-- <tr class=""> -->
+											<!-- <td colspan=""> <label><input type="checkbox" id="" class="cbVa" /> DSID EMAIL DOMAIN</label> </td> -->
+											<!-- <td colspan=""> <label><input type="checkbox" id="" class="cbVdi"  />  DSID PHOTO</label> </td> -->
+											<!-- <td colspan=""> <label><input type="checkbox" id="" class="cbToade"  />  DSID PPID</label> </td> -->
+											<!-- <td colspan=""> <label><input type="checkbox" id="" class="cbTat"  />  DSID NBD</label> </td> -->
+										<!-- </tr> -->
+										
 										<tr class="">
 											<td colspan="4">
 												<div style="height:5px; ">&nbsp;</div>
@@ -22630,7 +22728,8 @@ Howdy!
 											</td>
 										</tr>
 										<tr class="">
-											<td colspan=""> <label><input type="checkbox" id="" class="cbVa" /> VA</label> </td>
+																						
+											<td colspan=""> <label><input type="checkbox" id="" class="cbVkprs"  /> VKPRS</label> </td>
 											<td colspan=""> <label><input type="checkbox" id="" class="cbVdi"  /> VDI</label> </td>
 											<td colspan=""> <label><input type="checkbox" id="" class="cbToade"  /> TOADE</label> </td>
 											<td colspan=""> <label><input type="checkbox" id="" class="cbTat"  /> TAT</label> </td>
@@ -22642,11 +22741,11 @@ Howdy!
 											<td colspan=""> <label><input type="checkbox" id="" class="cbCidar"  /> CIDAR</label> </td>
 										</tr>
 										<tr>
-											<td colspan=""> <label><input type="checkbox" id="" class="cbVkprs"  /> VKPRS</label> </td>
+											
 											<td colspan=""> <label><input type="checkbox" id="" class="cbGavesr"  /> GAVE SR</label> </td>
-											<td colspan=""> <label><input type="checkbox" id="" class="cbSummarysent"  /> SENT SUMMARY EMAIL</label> </td>
+											<td colspan=""> <label><input type="checkbox" id="" class="cbSdcSiteEdu"  /> SDC </label> </td> 
 											<td colspan=""> <label><input type="checkbox" id="" class="cbNoi"  /> NOI</label> </td>
-											<td colspan="">  </td>
+											<td colspan=""> <label><input type="checkbox" id="" class="cbSummarysent"  /> SENT SUMMARY EMAIL</label> </td>
 										</tr>
 									</table>
 									
