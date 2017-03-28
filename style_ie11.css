@@ -10,6 +10,7 @@
 			padding:0px;
 			color:#777;
 			background-image: url("weather.png");
+			background-color:#eee;
 			height:2000px;
 			
 		}
@@ -28,8 +29,21 @@
 			 border-color:#fff;
 		}
 		
-		input.watermark { color: #eee; font-style: italic; }
-		.watermark { color: #eee; font-style: italic; }
+		/* 878787 d0d0d0  */
+		
+		
+		input.watermark { color: #878787 !important; font-style: italic; }
+		input.watermark1 { color: #878787 !important; font-style: italic; }
+		textarea.watermark { color: #878787 !important; font-style: italic; }
+		.watermark { color: #878787 !important; font-style: italic; }
+		
+		
+		.fieldHighlighter  {
+			background-color:#999999; color: #fff; padding:2px; line-height:15px;
+			
+		}
+		
+		
 		table {
 			border-spacing: 0px !important;
 			padding:0px !important;
@@ -548,6 +562,27 @@
 		
 		
 		
+		/* tblTechNotesCheckBox  */
+		.tblTechNotesCheckBox {
+			 vertical-align:top !important;
+		}
+		.tblTechNotesCheckBox td {
+			 vertical-align:top !important;
+			 padding-left:5px;
+			padding-right:5px;	
+			
+			
+		}
+		.tblTechNotesCheckBox td input {
+			 margin:0px;
+			
+		}
+		.tblTechNotesCheckBox label {
+			display: block;
+			line-height:10px;
+		}
+		
+		
 		
 		/* tblDispatchSYSXC  */
 		
@@ -574,9 +609,16 @@
 			padding-right:5px;	
 		}
 		
+		/* tblApn-Acp  */
 		
+		.tblApn-Acp {
+			width:100%;
+		}
 		
-		
+		.tblApn-Acp td {
+			padding-left:5px;
+			padding-right:5px;	
+		}
 		
 		
 		
